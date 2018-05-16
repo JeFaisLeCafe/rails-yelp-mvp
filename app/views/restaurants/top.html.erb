@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Top restaurants</h1>
+    </div>
+  </div>
+  <div class="row">
+    <% @rep.each do |resto| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h2><%= link_to resto.name, restaurant_path(resto) %></h2>
+        <ul>
+          <li>Rating: <%= resto.rating_moy %> / 5</li>
+          <li>Address: <%= resto.address %></li>
+          <li>Category: <%= resto.category %></li>
+          <li>Phone Number: <%= resto.phone_number %></li>
+        </ul>
+    </div>
+    <% end %>
+  </div>
+</div>

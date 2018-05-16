@@ -68,3 +68,5 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

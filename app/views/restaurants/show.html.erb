@@ -1,0 +1,21 @@
+<div class="row">
+  <% resto = @restaurant %>
+    <div class="col-xs-12">
+      <h2><%= resto.name %></h2>
+      <ul>
+        <li>Average Rating: <%= resto.rating_moy %> / 5</li>
+        <li>Address: <%= resto.address %></li>
+        <li>Category: <%= resto.category %></li>
+        <li>Phone Number: <%= resto.phone_number %></li>
+      </ul>
+      <h3>Avis :</h3>
+      <% resto.reviews.each do |review| %>
+      <ul>
+        <li>Note: <%= review.rating %> Avis: <%= review.content %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+</div>
